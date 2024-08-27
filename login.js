@@ -79,3 +79,5 @@ function validateForm(event) {
 window.onload = function() {
     document.getElementById('contact-form').addEventListener('submit', validateForm);
 };
+
+document.addEventListener('contextmenu', event => event.preventDefault());
