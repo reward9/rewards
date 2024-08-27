@@ -33,6 +33,7 @@ window.addEventListener('scroll',function(){
     }
 })
 
+document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 
