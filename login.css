@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#loadingSpinner{
+    position: absolute;
+    right: 600px;
+    font-size: 50px;
+    top: 200px;
+}
+body {
+    background: #050e2d;
+    font-family: "Cinzel Decorative", "Dancing Script";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.contact {
+    width: 80%;
+    max-width: 400px;
+    background: #0a1f44;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact h4 {
+    font-size: 24px;
+    color: #3cf;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeInText 1s ease-in-out forwards;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contact form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: #fff;
+    background: #1a2e55;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact form input:focus {
+    border-color: #3cf;
+    box-shadow: 0 0 10px rgba(60, 255, 255, 0.6);
+}
+
+.contact form .error {
+    color: #ff6f6f;
+    margin-top: 10px;
+}
+
+.contact input[type='submit'] {
+    width: 50%;
+    border: none;
+    background: #3cf;
+    color: #050e2d;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact input[type='submit']:hover {
+    background: #1a2e55;
+    color: #3cf;
+    box-shadow: 0 0 10px rgba(60, 255, 255, 0.6);
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .contact {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contact h4 {
+        font-size: 22px;
+    }
+
+    .contact form input {
+        padding: 12px;
+    }
+
+    .contact input[type='submit'] {
+        width: 60%;
+        padding: 12px;
+    }
+    #loadingSpinner{
+        right: 170px;
+        position: absolute;
+        font-size: 50px;
+        top: 500px;
+        color: white;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and  (max-width: 480px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contact h4 {
+        font-size: 20px;
+    }
+
+    .contact form input {
+        padding: 10px;
+    }
+
+    .contact input[type='submit'] {
+        width: 70%;
+        padding: 10px;
+    }
+}
